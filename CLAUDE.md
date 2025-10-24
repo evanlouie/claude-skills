@@ -10,8 +10,9 @@ This is a Claude Code plugin repository that hosts custom skills. Skills are aut
 
 ### Directory Structure
 ```
-marketplace.json              # Marketplace configuration for plugin distribution
-.claude-plugin/plugin.json   # Plugin metadata (name, version, description, author, license)
+.claude-plugin/
+  marketplace.json            # Marketplace configuration for plugin distribution
+  plugin.json                 # Plugin metadata (name, version, description, author, license)
 skills/                       # All skills for this plugin
   <skill-name>/
     SKILL.md                  # Required: Skill definition with YAML frontmatter
@@ -71,7 +72,7 @@ Choose based on skill complexity:
 
 ### Marketplace Configuration
 
-The `marketplace.json` file at the repository root enables plugin distribution. It lists this plugin in a marketplace that users can add to Claude Code.
+The `.claude-plugin/marketplace.json` file enables plugin distribution. It lists this plugin in a marketplace that users can add to Claude Code.
 
 **Required fields:**
 - `name`: Marketplace identifier (typically your GitHub username or org)
@@ -99,7 +100,7 @@ Users install via:
 2. Create `SKILL.md` with proper frontmatter
 3. Add reference documentation under `references/`
 4. Update `README.md` to list the new skill
-5. Bump version in both `.claude-plugin/plugin.json` and `marketplace.json`
+5. Bump version in both `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`
 6. Test locally by loading the plugin
 
 ### Updating Plugin Version
@@ -113,7 +114,7 @@ Update version in **both** files to keep them synchronized:
 }
 ```
 
-2. `marketplace.json`:
+2. `.claude-plugin/marketplace.json`:
 ```json
 {
   "metadata": {
@@ -152,7 +153,7 @@ When updating SKILL.md:
 
 To make the plugin available to others:
 
-1. **Ensure marketplace.json is configured** with correct GitHub repo reference
+1. **Ensure .claude-plugin/marketplace.json is configured** with correct GitHub repo reference
 2. **Commit and push** all changes to GitHub
 3. **Tag releases** (optional but recommended):
    ```bash
@@ -250,8 +251,8 @@ Skills are documentation/guidance, not executable code.
 ## Version Control
 
 This repository tracks:
-- Marketplace configuration (marketplace.json)
 - Plugin metadata (.claude-plugin/plugin.json)
+- Marketplace configuration (.claude-plugin/marketplace.json)
 - Skill definitions (SKILL.md files)
 - Reference documentation (markdown files)
 - Template scripts (Python files)
