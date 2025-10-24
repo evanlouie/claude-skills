@@ -1,0 +1,19 @@
+{
+  "name": "evlouie-skills",
+  "version": "1.0.0",
+  "description": "Custom Claude Code skills for FastHTML web development and Microsoft Agent Framework for building AI agents and multi-agent systems",
+  "author": {
+    "name": "evlouie"
+  },
+  "license": "MIT",
+  "keywords": [
+    "fasthtml",
+    "htmx",
+    "python",
+    "web-development",
+    "ai-agents",
+    "microsoft-agent-framework",
+    "multi-agent",
+    "azure-openai"
+  ]
+}
