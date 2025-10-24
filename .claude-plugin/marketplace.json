@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "evlouie-skills",
-      "source": ".",
+      "source": "./",
       "description": "Custom Claude Code skills for FastHTML web development and Microsoft Agent Framework for building AI agents and multi-agent systems",
       "version": "1.0.0",
       "author": {

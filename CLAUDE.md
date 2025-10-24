@@ -81,7 +81,7 @@ The `.claude-plugin/marketplace.json` file enables plugin distribution. It lists
 
 **Each plugin entry requires:**
 - `name`: Plugin identifier (must match `.claude-plugin/plugin.json`)
-- `source`: Path to plugin directory (typically `"."` for root)
+- `source`: Path to plugin directory (must start with `./`, use `"./"` for root)
 
 **Optional plugin metadata** (duplicates from plugin.json for marketplace display):
 - `description`, `version`, `author`, `license`, `keywords`
@@ -235,7 +235,7 @@ Optional metadata:
 
 Plugin entry fields:
 - `name`: Must match plugin.json name
-- `source`: Plugin directory path (use `"."` for root)
+- `source`: Plugin directory path (must start with `./`, use `"./"` for root)
 - `version`: Should match plugin.json version
 - All other fields from plugin.json can be duplicated for marketplace display
 
